@@ -1,17 +1,18 @@
-# Aurora Lake
+# Aurora Cabin
 
-A procedural northern-lights artwork, drawn pixel by pixel by a single
-Python program (`main.py`, standard library only).
+A procedural night-sky artwork in pure Python (standard library only).
 
-The scene: three aurora ribbons with vertical rays over a star field and
-a full moon, two mountain ridgelines, and the whole sky reflected in a
-rippled mountain lake. Every pixel is a fixed mathematical function of
-its position, so the program is fully deterministic: run it twice and
-the PNG bytes are identical.
+A log cabin with warm glowing windows sits among pine trees under
+curtains of northern lights, and the aurora, the moon and the cabin
+light all reflect in a still lake. Every pixel is computed by
+`main.py`; a fixed-seed PRNG places the stars, so the PNG written to
+`/output/entry.png` (720x720) is byte-identical on every run.
 
-Run it the way the grader does:
+Run it:
 
 ```sh
-MAKEFUN_OUTPUT_DIR=out python3 main.py
-# writes out/entry.png (720x720, about 210 KB)
+python3 main.py            # writes /output/entry.png
+OUTPUT_DIR=. python3 main.py
 ```
+
+Entry for make.fun's coolest-art-01 competition. MIT licensed.
